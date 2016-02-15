@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title> simple example </title>
+		<meta charset="utf-8">
+
+		<link rel="stylesheet" href="css/styles.css">
+
+	</head>
+	<body>
+		
+		<div id="nav-bar"></div>
+
+		<div id="content-area">
+
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis neque officiis minus rem accusamus nesciunt et, ipsam cumque voluptates consequuntur veniam nam recusandae odit molestias, tempore accusantium adipisci, est deserunt!
+			</p>
+
+			<div id="pic"></div>
+
+		</div>
+		
+		<script src="js/include.js"></script>
+		<script>
+
+
+			Include('nav-bar','includes/nav.html');
+
+
+			Include('pic','includes/imageframe.html', {
+
+				imgSrc: 'images/cat.gif',
+				name: 'cool cat'
+			
+			});
+
+		</script>
+	</body>
+</html>

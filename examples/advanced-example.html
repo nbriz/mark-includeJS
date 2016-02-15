@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title> advanced example </title>
+		<meta charset="utf-8">
+
+		<link rel="stylesheet" href="css/styles.css">
+
+	</head>
+	<body>
+		
+		<div id="nav-bar"></div>
+
+		<div id="content-area">
+			<p>
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis neque officiis minus rem accusamus nesciunt et, ipsam cumque voluptates consequuntur veniam nam recusandae odit molestias, tempore accusantium adipisci, est deserunt!
+			</p>
+			
+			 <form id="the-form">
+			 	<div class="item">
+					<input type="text" name="firstname1" placeholder="first name">
+					<input type="text" name="lastname1" placeholder="last name">
+					<input type="submit" value="Submit">
+			 	</div>
+			</form> 
+			<button onclick="newRow()"> Add New Row</button>
+
+		</div>
+		
+		<script src="js/include.js"></script>
+		<script>
+
+			Include('nav-bar','includes/nav.html');
+
+
+			var c = 1;
+			function newRow(){
+				Include('the-form','includes/entry.html',{
+					count: ++c // this will increment the value of 'c' each time, so that each input element has a unique name
+				});
+			}
+
+		</script>
+	</body>
+</html>
